@@ -11,16 +11,20 @@
     --font-2: "Big Shoulders Display", serif
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    height: 100%;
 }
 
 body{
     padding: 0;
     margin: 0;
     font-family: var(--font-1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 img{
@@ -41,18 +45,16 @@ p{
 }
 
 .outter-wrapper{
-    padding: 30px 100px;
-    width: auto;
-    max-width: 100%;
-    border-radius: 20px;
-    margin: 150px auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 
 .inner-wrapper{
     display: flex;
     padding: 100px 400px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .sedans{
@@ -78,4 +80,23 @@ button{
     height: 40px;
     width: 100px;
     backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 475px) {
+    .outter-wrapper{
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    .inner-wrapper{
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    .sedans{
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
 }
