@@ -12,7 +12,7 @@
 }
 
 html{
-    height: 100%;
+    font-size: 100%;
 }
 
 body{
@@ -41,62 +41,74 @@ h2{
 p{
     color: var(--white);
     padding-bottom: 80px;
-    font-size: 18px;
+    line-height: 1.5;
 }
 
 .outter-wrapper{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* flex-wrap: wrap;
+    flex-direction: row; */
     width: 100%;
-    height: 100vh;
+    height: auto;
+    margin: auto;
+    max-inline-size: min(100vw, 68rem);
+    padding-block: 80px;
 }
 
-.inner-wrapper{
+.outter-wrapper .inner-wrapper{
     display: flex;
-    padding: 100px 400px;
+    margin: 10% auto;
+}
+
+.inner-wrapper .my-section{
+    padding: 40px;
+    flex: 1 1 20rem;
 }
 
 .sedans{
     background-color: var(--bright-orange);
-    padding: 40px;
     border-radius: 10px 0 0 10px;
 }
 
 .suvs{
     background-color: var(--dark-cyan);
-    padding: 40px;
 }
 
 .luxury{
     background-color: var(--very-dark-cyan);
-    padding: 40px;
     border-radius: 0 10px 10px 0;
 }
 
 button{
     border-radius: 20px;
-    border: none;
+    border: 2px solid var(--white);
     height: 40px;
     width: 100px;
-    backdrop-filter: blur(10px);
+}
+
+.sedans button{
+    color: var(--bright-orange);
+}
+
+.suvs button{
+    color: var(--dark-cyan);
+}
+
+.luxury button{
+    color: var(--very-dark-cyan);
+}
+
+button:hover{
+    background-color: transparent;
+    color: var(--white);
+    transition-duration: 0.3s;
 }
 
 @media screen and (max-width: 475px) {
     .outter-wrapper{
-        height: 100%;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-    .inner-wrapper{
         flex-direction: column;
-        padding: 20px 10px;
     }
-    .sedans{
-        border-radius: 10px 10px 0 0;
-    }
-    .luxury{
-        border-radius: 0 0 10px 10px;
+    .my-section{
+        
     }
 }
