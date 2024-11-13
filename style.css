@@ -46,18 +46,18 @@ p{
 
 .outter-wrapper{
     display: flex;
-    /* flex-wrap: wrap;
-    flex-direction: row; */
     width: 100%;
     height: auto;
     margin: auto;
-    max-inline-size: min(100vw, 68rem);
-    padding-block: 80px;
+    max-inline-size: min(90vw, 65rem);
+    padding-block: 100px;
+    overflow: hidden;
 }
 
 .outter-wrapper .inner-wrapper{
     display: flex;
-    margin: 10% auto;
+    flex-wrap: wrap;
+    margin: 12% auto;
 }
 
 .inner-wrapper .my-section{
@@ -106,9 +106,17 @@ button:hover{
 
 @media screen and (max-width: 475px) {
     .outter-wrapper{
-        flex-direction: column;
+        display: flex;
     }
-    .my-section{
-        
+    .outter-wrapper .inner-wrapper{
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .sedans{
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 10px 10px;
     }
 }
